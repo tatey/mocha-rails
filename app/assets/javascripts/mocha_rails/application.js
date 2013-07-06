@@ -1,4 +1,3 @@
-//= require jquery
 //= require mocha
 //= require chai
 //= require sinon-chai
