@@ -2,7 +2,7 @@
 
 Mocha::Rails integrates the [Mocha](http://visionmedia.github.com/mocha/) JavaScript test framework with the Rails (>= 3.1) Asset Pipeline.
 
-**Note:** This project is modeled on [Jasminerice](https://github.com/bradphelan/jasminerice) and is fairly simple. If you want more features, please consider [Konacha](https://github.com/jfirebaugh/konacha), which provides a sandboxed server running on another port, a command-line task, fixtures, transactions, and other goodies. I will continue to maintain and upgrade MochaRails, however, so if its smaller feature set fits your needs, by all means please use it.
+**Note:** This project is modeled on [Jasminerice](https://github.com/bradphelan/jasminerice) and is fairly simple. If you want more features, please consider [Konacha](https://github.com/jfirebaugh/konacha), which provides a sandboxed server running on another port, a command-line task, fixtures, transactions, and other goodies. I will continue to maintain and upgrade Mocha::Rails, however, so if its smaller feature set fits your needs, by all means please use it.
 
 ## Description
 
@@ -11,7 +11,7 @@ Mocha::Rails is a mountable Rails engine that serves a browser-based Mocha test 
 It loads [Chai](http://chaijs.com) for assertions, although since Mocha is decoupled from the assertion library, you can
 use another assertion library if you choose (or even write your own.)
 
-The Mocha interface system allows developers to choose their style of DSL. MochaRails is hardcoded for now to the
+The Mocha interface system allows developers to choose their style of DSL. Mocha::Rails is hardcoded for now to the
 "BDD" interface, but if you want to write in one of the other styles, please "+1" the open issue to make it configurable.
 
 ## Installation
@@ -85,7 +85,7 @@ see a completely blank page, or an almost blank page with a few zeros in the upp
 
 * Chris Smith (quartzmo)
 
-MochaRails was inspired by the design of [Jasminerice](https://github.com/bradphelan/jasminerice).
+Mocha::Rails was inspired by the design of [Jasminerice](https://github.com/bradphelan/jasminerice).
 
 ## License
 
