@@ -9,7 +9,7 @@ require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 Bundler.require
-require "mocha_rails"
+require "mocha-rails"
 
 module Dummy
   class Application < Rails::Application

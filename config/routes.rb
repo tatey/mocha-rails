@@ -1,3 +1,3 @@
-MochaRails::Engine.routes.draw do
-  root to: "tests#index"
+Mocha::Rails::Engine.routes.draw do
+  root to: 'tests#index'
 end

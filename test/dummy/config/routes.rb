@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount MochaRails::Engine => "/mocha_rails"
+  mount Mocha::Rails::Engine => "/mocha-rails"
 end

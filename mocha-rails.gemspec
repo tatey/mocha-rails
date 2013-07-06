@@ -1,11 +1,11 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "mocha_rails/version"
+require "mocha/rails/version"
 
 Gem::Specification.new do |s|
-  s.name        = "mocha_rails"
-  s.version     = MochaRails::VERSION
+  s.name        = "mocha-rails"
+  s.version     = Mocha::Rails::VERSION
   s.authors     = ["Chris smith"]
   s.email       = ["quartzmo@gmail.com"]
   s.homepage    = "https://github.com/quartzmo/mocha_rails"

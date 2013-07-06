@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mocha_rails (0.0.4)
+    mocha-rails (0.0.4)
       rails (>= 3.1.0)
 
 GEM
@@ -92,4 +92,4 @@ PLATFORMS
 
 DEPENDENCIES
   jquery-rails
-  mocha_rails!
+  mocha-rails!
