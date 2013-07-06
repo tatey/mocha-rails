@@ -2,4 +2,4 @@
 //= require chai
 //= require sinon-chai
 //= require sinon
-//= require ./mocha-rails
+//= require ./configuration

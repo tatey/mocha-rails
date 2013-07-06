@@ -10,7 +10,7 @@ module Mocha
         route "mount Mocha::Rails::Engine => '#{options[:mount]}' unless Rails.env.production?"
 
         test_dir = Dir.exists?(::Rails.root.join 'spec') ? 'spec' : 'test'
-        copy_file 'mocha-suite.js', "#{test_dir}/javascripts/mocha-suite.js"
+        copy_file 'suite.js', "#{test_dir}/javascripts/suite.js"
       end
     end
   end
