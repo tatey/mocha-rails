@@ -1,12 +1,12 @@
-# MochaRails
+# Mocha::Rails
 
-MochaRails integrates the [Mocha](http://visionmedia.github.com/mocha/) JavaScript test framework with the Rails (>= 3.1) Asset Pipeline.
+Mocha::Rails integrates the [Mocha](http://visionmedia.github.com/mocha/) JavaScript test framework with the Rails (>= 3.1) Asset Pipeline.
 
 **Note:** This project is modeled on [Jasminerice](https://github.com/bradphelan/jasminerice) and is fairly simple. If you want more features, please consider [Konacha](https://github.com/jfirebaugh/konacha), which provides a sandboxed server running on another port, a command-line task, fixtures, transactions, and other goodies. I will continue to maintain and upgrade MochaRails, however, so if its smaller feature set fits your needs, by all means please use it.
 
 ## Description
 
-MochaRails is a mountable Rails engine that serves a browser-based Mocha test suite, along with your development JavaScript files, via the Asset Pipeline.
+Mocha::Rails is a mountable Rails engine that serves a browser-based Mocha test suite, along with your development JavaScript files, via the Asset Pipeline.
 
 It loads [Chai](http://chaijs.com) for assertions, although since Mocha is decoupled from the assertion library, you can
 use another assertion library if you choose (or even write your own.)
@@ -16,15 +16,16 @@ The Mocha interface system allows developers to choose their style of DSL. Mocha
 
 ## Installation
 
-In your Rails >= 3.1 app, **you must add** `gem 'mocha_rails'` to your `Gemfile`:
+In your Rails >= 3.1 app, **you must add** `gem 'mocha-rails'` to your `Gemfile`:
 
 ```
 group :test, :development do
-  gem 'mocha_rails'
+  gem 'mocha-rails'
 end
 ```
-MochaRails includes a convenient install generator that adds a route to `config/routes.rb` and adds a `mocha-suite.js`
-Sprockets manifest file to either `spec/javascripts` or `test/javascripts`. The `mocha-suite.js` file does not contain a catch-all require
+
+Mocha::Rails includes a convenient install generator that adds a route to `config/routes.rb` and adds a `suite.js`
+Sprockets manifest file to either `spec/javascripts` or `test/javascripts`. The `suite.js` file does not contain a catch-all require
 directive, you must add the requires for your production and test paths yourself. Avoid using `require_tree .` which has caused an
 [issue](https://github.com/quartzmo/mocha_rails/issues/7), instead use more specific
 requires for each spec or test file, such as `//= require ./models/my-model-test`.
@@ -32,11 +33,11 @@ requires for each spec or test file, such as `//= require ./models/my-model-test
 To install the required configuration, **you must run**:
 
 ```
-rails g mocha_rails:install
+rails g mocha:rails:install
 ```
 
 The generator has a single option, `--mount`, which lets you specify the route to your test suite. The default
-route is `/mocha`.
+route is `/specs`.
 
 ## Organizing your test files
 
@@ -44,7 +45,7 @@ Sprockets will not load two files with the same relative asset path and base nam
 as `app/assets/javascripts/example.js` and `test/javascripts/example.js.coffee`. In this example, the test file will
 **not** be loaded.
 
-One solution is to simply give your test files a different name, for example in `test/javascripts/mocha-suite.js`:
+One solution is to simply give your test files a different name, for example in `test/javascripts/suite.js`:
 
 ```
 //= require example
@@ -77,7 +78,7 @@ describe 'Array', ->
 
 ## Running
 
-Start your server in development mode, and open `http://localhost:3000/mocha`. You should see Mocha's very attractive results page. If you
+Start your server in development mode, and open `http://localhost:3000/specs`. You should see Mocha's very attractive results page. If you
 see a completely blank page, or an almost blank page with a few zeros in the upper right corner, check your JavaScript console for errors.
 
 ## Credits
