@@ -3,7 +3,7 @@ module Mocha
     class InstallGenerator < ::Rails::Generators::Base
       source_root File.expand_path('../templates', __FILE__)
 
-      class_option :mount, :aliases => '-m', :type => :string, :default => 'mocha', :desc => 'Mounts engine at <MOUNT>'
+      class_option :mount, :aliases => '-m', :type => :string, :default => '/specs', :desc => 'Mounts engine at <MOUNT>'
 
       desc 'Installs mocha-rails into your application'
       def install
